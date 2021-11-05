@@ -280,7 +280,12 @@ a:active {
             <div>
                 <div class="small text-gray-500"><?php echo date("Y/m/d"); ?></div>
                 
-                Nombre: <?php echo buscarProducto($_SESSION['id_productos']); ?>
+                Nombre: <?php 
+                if (!isset($_SESSION['id_productos']))
+                    {echo "No hay productos";}
+                else {echo buscarProducto($_SESSION['id_productos']);}
+                
+                ?>
             </div>  
               
            
@@ -370,7 +375,7 @@ a:active {
 <li class="nav-item dropdown no-arrow">
     <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <span class="mr-2 d-none d-lg-inline text-gray-600 small"> <?php echo $_SESSION[ 'usuario'];  ?> </span>
+        <span class="mr-2 d-none d-lg-inline text-gray-600 small"> <?php echo $_SESSION[ 'emausu'];  ?> </span>
         <img class="img-profile rounded-circle"
             src="bs/img/undraw_profile.svg">
     </a>
