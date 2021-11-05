@@ -1,3 +1,5 @@
+
+   
 <?php
 session_start();
 
@@ -21,7 +23,8 @@ $ejecutar = $conexion->query($sql);
     <meta name="author" content="">
 
     <title>SB Admin 2 - Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="css/style_administrador.css">
+    <link rel="stylesheet" type="text/css" href="css/styles_pagina_pricipal.css">
+    <link rel="stylesheet" type="text/css" href="css/styles_tablaproductos.css">
     <!-- Custom fonts for this template-->
     <link href="bstra/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
     <link
@@ -30,7 +33,7 @@ $ejecutar = $conexion->query($sql);
 
     <!-- Custom styles for this template-->
     <link href="bstra/css/sb-admin-2.min.css" rel="stylesheet">
-    
+
 
 </head>
 
@@ -44,10 +47,11 @@ $ejecutar = $conexion->query($sql);
 
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                <div class="sidebar-brand-icon rotate-n-15"  >
+                <div class="logounifer">  </div> 
                 </div>
-                <div class="sidebar-brand-text mx-3">TIENDA EN LINEA</div>
+              
+                <div class="sidebar-brand-text mx-3">UNIFER</div>
             </a>
 
             <!-- Divider -->
@@ -55,7 +59,7 @@ $ejecutar = $conexion->query($sql);
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="index.html">
+                <a class="nav-link" href="login.php">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Inicio</span></a>
             </li>
@@ -91,10 +95,28 @@ $ejecutar = $conexion->query($sql);
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                <a class="nav-link collapsed" href="http://localhost/ferreteriaunifer/registro.php" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Registrarse</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Custom Utilities:</h6>
+                        <a class="collapse-item" href="utilities-color.html">Colors</a>
+                        <a class="collapse-item" href="utilities-border.html">Borders</a>
+                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
+                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="http://localhost/ferreteriaunifer/login.php" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Iniciar Sesion</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
@@ -118,7 +140,7 @@ $ejecutar = $conexion->query($sql);
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
+                <a class="nav-link collapsed" href="login.php" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
                     <span>Salir</span>
@@ -325,9 +347,9 @@ $ejecutar = $conexion->query($sql);
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> <?php echo $_SESSION[ 'emausu'];  ?></span>
-                                <img class="fotousuario"
-                                    src="C:\xampp2\htdocs\ferreteriaunifer\assets\fotostiven.jpg">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> <?php echo $_SESSION[ 'emausu'];  ?> </span>
+                                <img class="img-profile rounded-circle"
+                                    src="bs/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
