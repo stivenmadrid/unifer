@@ -1,5 +1,5 @@
 <?php
-session_start();
+ session_start();
 include ("db.php");
 $sql = "select * from categoria";
 $ejecutar = $conexion->query($sql);
@@ -326,7 +326,7 @@ a:active {
             </div>
             <div class="font-weight-bold">
                 <div class="text-truncate">Mensaje 1</div>
-                <div class="small text-gray-500">Emily Fowler · 58m</div>
+                <div class="small text-gray-500">BIENVENIDO <?PHP echo('nomusu')?></div>
             </div>
         </a>
         <a class="dropdown-item d-flex align-items-center" href="#">

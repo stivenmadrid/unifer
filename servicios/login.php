@@ -24,9 +24,11 @@ if ($result) {
 			$_SESSION['codusu'] = $row['codusu'];
 			$_SESSION['emausu'] = $row['emausu'];
 			$_SESSION['nomusu'] = $row['nomusu'];
+			$_SESSION['usuario'] = $row['Usuario'];
 			header('Location: ../pagina_principal.php');
 			
 		}
+		
 	} else {
 		echo '
 		<script>
@@ -37,4 +39,4 @@ if ($result) {
 	}
 } else {
 	header('Location: ../login.php?e=1');
-}
+} 

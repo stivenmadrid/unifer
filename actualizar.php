@@ -18,6 +18,8 @@ $ejecutar = $conexion->query($sql);
             
         
       <tr>
+
+                <td>id </td>
                 <td>producto </td>
               
                 <td>Nombre producto </td>
@@ -45,6 +47,7 @@ $ejecutar = $conexion->query($sql);
 
             {
                 echo '<tr >'; 
+                echo '<td>'.$fila->id_productos.'</td>';
                 echo '<td>'.$fila->nombre_producto.'</td>';
                 echo '<td>'.$fila->precio.'</td>';
                 echo '<td>'.$fila->referencia.'</td>';

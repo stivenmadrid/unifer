@@ -12,12 +12,8 @@
     
         <link href="bstra/css/sb-admin-2.min.css" rel="stylesheet">
 </head>
-
-
 <div class="h2">  </div> 
 <body>
-
-
                                    
                                         <div class="registro">  
         
@@ -26,7 +22,6 @@
                                         <form action="servicios/registro.php" method="POST"  onsubmit="return validar();"> 
                     
                
-
                                                 <Input type="text" placeholder="Nombre Completo" id="nombre" name="nomusu" class="form-control form-control-user">
                                                 <br>
                                                 <Input type="text" placeholder="Apellido Completo" id="apellido" name="apeusu" class="form-control form-control-user">
@@ -41,11 +36,8 @@
                                                 <input type="password" placeholder="Confirmar contraseña" id="contraseña2" class="form-control form-control-user">
                                                 <br>
                                                 <INPUT TYPE="submit" NAME="REGISTRARME" VALUE="REGISTRARME" class="btn btn-success btn-user btn-block">
-
-
                                         </form>
                                         </div>
-
                                         
     
 </body>
