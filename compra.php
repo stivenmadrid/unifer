@@ -5,16 +5,30 @@ $codigo=$_SESSION['id_productos'];
 if(isset ($_POST["GENERARPEDIDO"]))
 
 {
+    echo '<h2>gracias por su compra!!!</h2>';
     echo 'entro por comprar';
+    echo "</br>";
     $id_pedido=rand (1,100000);
-    echo $_SESSION['cantidad'];
-    echo 'metodo:'.$_POST["mediopago"];
+   
+    echo '<h4>cantidad comprada:</h4>' .$_SESSION['cantidad'];
+    echo "</br>";
+    echo '<h4>metodo de pago :</h4>'.$_POST["mediopago"];
+    echo "</br>";
+    echo '<h4>direccion de la compra:</h4>'.$_POST["direccion"];
+    echo "</br>";
+    echo '<h4>departamento:</h4>'.$_POST['departamento'];
+     
+ $cantidad=$_SESSION['cantidad'];
+ $direccion=$_POST['direccion'];
 
-$cantidad=$_SESSION['cantidad'];
-$direccion=$_POST['direccion'];
-$departamento=$_POST['departamento'];
-$ciudad=$_POST['ciudad'];
+
+ $departamento=$_POST['departamento'];
+
+
+ $ciudad=$_POST['ciudad'];
+
 $mediopago=$_POST['mediopago'];
+
 $login_pedido=$_SESSION['usuario'];
 
 
