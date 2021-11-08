@@ -18,7 +18,7 @@ $ejecutar = $conexion->query($sql);
     <link href="bstra/css/sb-admin-2.min.css" rel="stylesheet">
     <title>Document</title>
     <?php
-
+include ("db.php");
 $conexion = mysqli_connect("localhost", "root", "", "ferreteria") or
     die("Problemas con la conexión");
 //$var=$_REQUEST["id_producto"];
@@ -27,12 +27,15 @@ $conexion = mysqli_connect("localhost", "root", "", "ferreteria") or
 die("Problemas en el select:" . mysqli_error($conexion));
 
 if ($reg = mysqli_fetch_array($registros)) {
+ 
+
     ?>
 
 <body>
 
 <main class="todo">
-
+ 
+<!-- 
         <div class="contenedor__consultar">
              
         <form >
@@ -48,27 +51,27 @@ if ($reg = mysqli_fetch_array($registros)) {
                    
                  <br>
                   <br>
-        </div>
+                  </form>
+        </div> -->
                   
-            <div class="contenedor__actualizarproducto">
+            <!-- <div class="contenedor__actualizarproducto"> -->
 
 
 
-
+            <div class="registro">
             
-                <form  
-
+             
                     <H2>ACTUALIZAR PRUDUCTO</H2>
                     <br>
                     <br>
                     <form action="servicios/actualiza3.php" method="post">
                     Ingrese nuevo codigo:
-                    <input type="text" name="codigonuevo" value="<?php echo $reg['codigo'] ?>" class="form-control form-control-user">
-                    <br>
+                        <input type="text" name="codigonuevo" value="<?php echo $reg['codigo'] ?>" class="form-control form-control-user">
+                        <br>
                     nombre
-                    <br>
-                    <input type="text" name="nombrenuevo" value="<?php echo $reg['nombre_producto'] ?>" class="form-control form-control-user">
-                    <br>
+                        <br>
+                        <input type="text" name="nombrenuevo" value="<?php echo $reg['nombre_producto'] ?>" class="form-control form-control-user">
+                        <br>
                     precio
                         <br>
                         <input type="text" name="precionuevo" value="<?php echo $reg['precio'] ?>" class="form-control form-control-user">
@@ -88,16 +91,16 @@ if ($reg = mysqli_fetch_array($registros)) {
          
          
                         <input type="submit" value="Modificar" class="form-control form-control-user">
-    </form>
+                        </form>
                          </div>
 
+                         
                                             
     <?php
 
   } else
     echo "No existe EL PRODUCTO con dicho ID";
   ?>
-                </form>
 
     </main>
     <script src="js/script.js"></script>

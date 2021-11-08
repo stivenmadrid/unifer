@@ -53,7 +53,7 @@ $ejecutar = $conexion->query($sql);
                 echo '<td>'.$fila->referencia.'</td>';
                 echo '<td ><img src="imagen/' .$fila->imagen.'" width="300" height="150"></td>';
             echo '<td> <form action="actualiza.php" method="POST"> 
-           <input type="hidden" name="id_productos" value="'.$fila->id_productos.'">
+           <input type="hidden" name="id_producto" value="'.$fila->id_productos.'">
              <input type="submit" value="Actualizar" class="btn btn-primary btn-block btn-large">
              </form>
              </td>';
