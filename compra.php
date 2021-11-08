@@ -29,12 +29,15 @@ if(isset ($_POST["GENERARPEDIDO"]))
 
 $mediopago=$_POST['mediopago'];
 
-$login_pedido=$_SESSION['usuario'];
+$usuario=$_SESSION['codusu'];
+$id_productos=$_SESSION['id_productos'];
 
 
-$sql = "INSERT INTO pedido (id_pedido,cantidad,direccion,departamento,ciudad,mediopago,id_cliente_pedido,login_pedido,id_productos_pedido,id_categoria_pedido)  VALUES (
+
+
+$sql = "INSERT INTO pedido (cantidad,direccion,departamento,ciudad,mediopago,codusu,id_productos,id_categoria)  VALUES (
   
-    '$id_pedido','$cantidad','$direccion','$departamento','$ciudad','$mediopago','2','$login_pedido','77','1');";
+    '$cantidad','$direccion','$departamento','$ciudad','$mediopago','$usuario','$id_productos','1');";
     $ejecutar = $conexion->query($sql);
 }
 
