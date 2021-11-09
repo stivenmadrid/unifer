@@ -8,12 +8,12 @@
   <?php
   $conexion = mysqli_connect("localhost", "root", "", "ferreteria") or
     die("Problemas con la conexión");
-
+$id=$_POST['id_producto'];
   $registros = mysqli_query($conexion, "select * from productos
-                        where id_productos='$_REQUEST[id_producto]'") or
+                        where id_productos=$id") or
     die("Problemas en el select:" . mysqli_error($conexion));
   if ($reg = mysqli_fetch_array($registros)) {
-    $view =mysqli_query($conexion, "delete  from productos where id_productos='$_REQUEST[id_producto]'") or
+    $view =mysqli_query($conexion, "delete  from productos where id_productos=$id") or
       die("Problemas en el select:" . mysqli_error($conexion));
     echo "Se efectuó el borrado del producto con dicho id.";
   } else {

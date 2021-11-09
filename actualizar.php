@@ -62,7 +62,7 @@ $ejecutar = $conexion->query($sql);
              </form><br>
              <form action="Eliminar3.php" method="POST"> 
              <input type="hidden" name="id_producto" value="'.$fila->id_productos.'">
-             <input type="submit" value="Eliminar" name="id_producto"  class="btn btn-primary btn-block btn-large">   
+             <input type="submit" value="Eliminar"   class="btn btn-primary btn-block btn-large">   
              </form><br>
              <form action="formularioconsultar.php" method="POST"> 
              <input type="submit" value="consultar" class="btn btn-primary btn-block btn-large">   
