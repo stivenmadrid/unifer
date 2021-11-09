@@ -60,15 +60,16 @@ $ejecutar = $conexion->query($sql);
             echo '<td> 
             
              </form><br>
-             <form action="Eliminar3.php" method="POST"> 
+             <form action="Eliminar3.php" method="POST" onC> 
              <input type="hidden" name="id_producto" value="'.$fila->id_productos.'">
-             <input type="submit" value="Eliminar"   class="btn btn-primary btn-block btn-large">   
-             </form><br>
-             <form action="formularioconsultar.php" method="POST"> 
+             <input type="submit" value="Eliminar"   onclick="pedido()" class="btn btn-primary btn-block btn-large">   
+             </form><br> 
+             <form action="formularioconsultar.php"   method="POST"> 
              <input type="submit" value="consultar" class="btn btn-primary btn-block btn-large">   
              </form><br>
              <form action="crearproducto.php" method="POST"> 
-             <input type="submit" value="insertar" class="btn btn-primary btn-block btn-large">   
+             <input type="submit" value="insertar"
+             class="btn btn-primary btn-block btn-large">   
              </form><br>
              </td>';
                 echo '</tr>';
