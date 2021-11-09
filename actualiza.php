@@ -14,16 +14,17 @@ $ejecutar = $conexion->query($sql);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles_actualiza.css">
+ 
     <link href="bstra/css/sb-admin-2.min.css" rel="stylesheet">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="css/styles_actualizas.css">
     <?php
 include ("db.php");
 $conexion = mysqli_connect("localhost", "root", "", "ferreteria") or
     die("Problemas con la conexión");
 //$var=$_REQUEST["id_producto"];
     $registros = mysqli_query($conexion, "select * from productos
-    where id_productos='$_REQUEST[id_producto]'") or
+    where id_productos='$_REQUEST[id_productos]'") or
 die("Problemas en el select:" . mysqli_error($conexion));
 
 if ($reg = mysqli_fetch_array($registros)) {
@@ -33,7 +34,6 @@ if ($reg = mysqli_fetch_array($registros)) {
 
 <body>
 
-<main class="todo">
  
 <!-- 
         <div class="contenedor__consultar">
@@ -58,9 +58,9 @@ if ($reg = mysqli_fetch_array($registros)) {
 
 
 
-            <div class="registro">
-            
-             
+           
+            <?php include("paginapro.php")?>   
+                <div class="contenedoractuali">
                     <H2>ACTUALIZAR PRUDUCTO</H2>
                     <br>
                     <br>
@@ -82,7 +82,7 @@ if ($reg = mysqli_fetch_array($registros)) {
                         <br><br>
                     imagen
                         <br>
-                        <input type="text" name="imagennuevo" value="<?php echo $reg['Imagen'] ?>" class="form-control form-control-user">
+                        <input type="text" name="imagennuevo" value="<?php echo $reg['imagen'] ?>" class="form-control form-control-user">
                         <br>
                         <input type="hidden" name="id_productoviejo" value="<?php echo $reg['id_productos'] ?>" class="form-control form-control-user">
                         <br>
@@ -92,7 +92,7 @@ if ($reg = mysqli_fetch_array($registros)) {
          
                         <input type="submit" value="Modificar" class="form-control form-control-user">
                         </form>
-                         </div>
+                </div>       
 
                          
                                             
@@ -102,7 +102,7 @@ if ($reg = mysqli_fetch_array($registros)) {
     echo "No existe EL PRODUCTO con dicho ID";
   ?>
 
-    </main>
+   
     <script src="js/script.js"></script>
 </body>
 
