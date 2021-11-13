@@ -21,8 +21,12 @@
         <input type="password"  placeholder="contraseña"  id="contraseña3" name="pasusu" required="required" />
         <button type="submit" id="Ingresar" class="btn btn-primary btn-block btn-large">Ingresar</button>
     </form>
-   
- </div>
+    <P>si no estas registrado <a href="registro.php"><spam>Click Aqui</spam></P></a>
+</div>
+    
+    
+    
+
        
 
     

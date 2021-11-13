@@ -37,6 +37,7 @@
                                                 <br>
                                                 <INPUT TYPE="submit" NAME="REGISTRARME" VALUE="REGISTRARME" class="btn btn-success btn-user btn-block">
                                         </form>
+                                        <P>Yag ienes una cuenta? entonces <a href="login.php"><spam>Click Aqui</spam></P></a>
                                         </div>
                                         
     
