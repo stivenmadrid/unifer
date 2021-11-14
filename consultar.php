@@ -24,9 +24,13 @@ $pedido="SELECT * FROM pedido";
     
     
                <div CLASS="TABLA">
+           
                     <table class="table table-dark"  class="table" class="table table-responsive table-striped"> 
-                         <H2 ALIGN=CENTER> PEDIDOS </H1>
+                        
+                         <div class="tabla">
+                         <H2 ALIGN=CENTER> PEDIDOS </H2>
                             <tr>
+                               
                                     <td>ID PEDIDO</td>
                                     <td>CANTIDAD</td>
                                     <td>DIRECCION</td>
@@ -39,7 +43,8 @@ $pedido="SELECT * FROM pedido";
                                     <td>ESTADO</td>
                                     <TD>AGREGAR ESTADO </TD>
                                     <td>ACTUALIZAR DATOS </TD>
-                            <tr>
+                               
+                        </div>     <tr>
 <?php  
 
 $resultado = mysqli_query($conexion,$pedido);
@@ -58,7 +63,7 @@ while($row=mysqli_fetch_assoc($resultado)){?>
                                     <td><?php echo $row["id_productos"]; ?>  </td>
                                     <td><?php echo $row["id_categoria"]; ?>  </td>
                                     <td><?php echo $row["estado"]; ?>  </td>
-                                    <td> <form action="pedido.php"><input type="text" name="estadoproducto"> <br>
+                                    <td> <form action="pedido.php" method="POST"><input type="text" name="estadoproducto"> <br>
                                     <input type="submit" value="Guardar" name="guardar" class="btn btn-primary btn-block btn-large">
                                     <input type="hidden" name="id_pedido" value="'.$fila->id_pedido.'"> 
                                     <form>
@@ -70,8 +75,7 @@ while($row=mysqli_fetch_assoc($resultado)){?>
                                     </form>
                                     <td>
                                     
-                                   
-
+                                 
                       
                                     </tr> 
                            <?php } ?>       
