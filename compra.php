@@ -35,6 +35,7 @@ $id_productos=$_SESSION['id_productos'];
 
 
 
+
 $sql = "INSERT INTO pedido (cantidad,direccion,departamento,ciudad,mediopago,cedula,id_productos,id_categoria)  VALUES (
   
     '$cantidad','$direccion','$departamento','$ciudad','$mediopago','$usuario','$id_productos','1');";

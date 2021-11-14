@@ -16,6 +16,7 @@ $pedido="SELECT * FROM pedido";
     <link rel="stylesheet" type="text/css" href="css/consultar.css">
     <link href="bstra/css/sb-admin-2.min.css" rel="stylesheet">
     
+    
    
 </head>
 
@@ -36,6 +37,8 @@ $pedido="SELECT * FROM pedido";
                                     <td>ID PRODUCTO</td>
                                     <td>CATEGORIA</td>
                                     <td>ESTADO</td>
+                                    <TD>AGREGAR ESTADO </TD>
+                                    <td>ACTUALIZAR DATOS </TD>
                             <tr>
 <?php  
 
@@ -44,7 +47,7 @@ $resultado = mysqli_query($conexion,$pedido);
 
 while($row=mysqli_fetch_assoc($resultado)){?>
                             <tr>
-                                
+                                    
                                     <td ><?php echo $row["id_pedido"]; ?> </td>
                                     <td> <?php echo $row["cantidad"]; ?> </td>
                                     <td><?php echo $row["direccion"]; ?>  </td>
@@ -55,7 +58,18 @@ while($row=mysqli_fetch_assoc($resultado)){?>
                                     <td><?php echo $row["id_productos"]; ?>  </td>
                                     <td><?php echo $row["id_categoria"]; ?>  </td>
                                     <td><?php echo $row["estado"]; ?>  </td>
-                                
+                                    <td> <form action="pedido.php"><input type="text" name="estadoproducto"> <br>
+                                    <input type="submit" value="Guardar" name="guardar" class="btn btn-primary btn-block btn-large">
+                                    <input type="hidden" name="id_pedido" value="'.$fila->id_pedido.'"> 
+                                    <form>
+                                  
+                                    </td>
+                                    <td> <form action="Eliminar_pedido.php" method="post"> 
+                                    <input type="submit" value="Eliminar"  class="btn btn-primary btn-block btn-large"> 
+                                    <input type="hidden" name="id_pedido" value="'.$fila->estado.'">
+                                    </form>
+                                    <td>
+                                    
                                    
 
                       
@@ -63,6 +77,7 @@ while($row=mysqli_fetch_assoc($resultado)){?>
                            <?php } ?>       
                     </table>
 
+                   
                 </div>          
                
      
