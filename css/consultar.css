@@ -6,24 +6,14 @@
 } 
 
 
-.tabla{
-  background-color: blue;
+.TABLA{
+  padding: 30px;
+  padding-left: 12;
+  margin-left: 2.5px ;
+  border-radius: 50px;
 }
+
 
 H2{
-
-  background-color: rgba(61, 61, 209, 0.041);
-
+  background: rgb(49, 49, 49);
 }
-
-/* .TABLA{
-
-
-   padding: 30px;
-   width: 1700px;
-   border-radius: 30px;
-   margin-left: 2.5px ;
-   padding-left: 12;
-   
-    
-}   */

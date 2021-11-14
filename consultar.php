@@ -27,7 +27,7 @@ $pedido="SELECT * FROM pedido";
            
                     <table class="table table-dark"  class="table" class="table table-responsive table-striped"> 
                         
-                         <div class="tabla">
+                        
                          <H2 ALIGN=CENTER> PEDIDOS </H2>
                             <tr>
                                
@@ -63,15 +63,17 @@ while($row=mysqli_fetch_assoc($resultado)){?>
                                     <td><?php echo $row["id_productos"]; ?>  </td>
                                     <td><?php echo $row["id_categoria"]; ?>  </td>
                                     <td><?php echo $row["estado"]; ?>  </td>
-                                    <td> <form action="pedido.php" method="POST"><input type="text" name="estadoproducto"> <br>
-                                    <input type="submit" value="Guardar" name="guardar" class="btn btn-primary btn-block btn-large">
-                                    <input type="hidden" name="id_pedido" value="'.$fila->id_pedido.'"> 
-                                    <form>
+                                    
+                                    <td> <form action="pedido.php" method="POST">
+                                    <input type="text" name="estadopedido"> <br>
+                                    <input type="hidden" name="id_pedidos" value=" <?php echo $row['id_pedido']?>"> 
+                                    <input type="submit" value="Guardar"  class="btn btn-primary btn-block btn-sm">
+                                    </form>
                                   
                                     </td>
-                                    <td> <form action="Eliminar_pedido.php" method="post"> 
-                                    <input type="submit" value="Eliminar"  class="btn btn-primary btn-block btn-large"> 
-                                    <input type="hidden" name="id_pedido" value="'.$fila->estado.'">
+                                    <td>  <form action="Eliminar_pedido.php" method="POST" > 
+                                        <input type="hidden" name="id_pedidos" value="<?php echo $row['id_pedido']?>">
+                                        <input type="submit" value="Eliminar"  class="btn btn-primary btn-block btn-large">  
                                     </form>
                                     <td>
                                     
