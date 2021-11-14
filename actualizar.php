@@ -20,6 +20,7 @@ $ejecutar = $conexion->query($sql);
       <tr>
 
                 <td>id </td>
+                <td> codigo </td>
                 <td>producto </td>
               
                 <td>Nombre producto </td>
@@ -48,6 +49,7 @@ $ejecutar = $conexion->query($sql);
             {
                 echo '<tr >'; 
                 echo '<td>'.$fila->id_productos.'</td>';
+                echo '<td>'.$fila->codigo.'</td>';
                 echo '<td>'.$fila->nombre_producto.'</td>';
                 echo '<td>'.$fila->precio.'</td>';
                 echo '<td>'.$fila->referencia.'</td>';
@@ -64,7 +66,7 @@ $ejecutar = $conexion->query($sql);
              <input type="hidden" name="id_producto" value="'.$fila->id_productos.'">
              <input type="submit" value="Eliminar"   onclick="pedido()" class="btn btn-primary btn-block btn-large">   
              </form><br> 
-             <form action="formularioconsultar.php"   method="POST"> 
+             <form action="consultar.php"   method="POST"> 
              <input type="submit" value="consultar" class="btn btn-primary btn-block btn-large">   
              </form><br>
              <form action="crearproducto.php" method="POST"> 

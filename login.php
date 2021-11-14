@@ -8,6 +8,7 @@
     <title>login</title>
     <link rel="stylesheet" type="text/css" href="css/login2.css">
     <link href="bstra/css/sb-admin-2.min.css" rel="stylesheet">
+    <link rel="stylesheet" media="only screen and (max-width: 768px)" href="estilos.css">
 
 </head> 
 <div class="h2">  </div>      
@@ -26,12 +27,18 @@
         <br>
         <button type="submit" id="Ingresar" class="btn btn-primary btn-block btn-large">Ingresar</button>
     </form>
+<<<<<<< HEAD
     <P>si no estas registrado <a href="registro.php"><spam>Click Aqui</spam></P></a>
 </div>
     
     
     
 
+=======
+    <br>
+    <P align="center">no tengo una cuenta <a   href="registro.php"><spam>Click Aqui</spam></P></a>
+ </div>
+>>>>>>> main
        
 
     

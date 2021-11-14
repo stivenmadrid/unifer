@@ -18,7 +18,7 @@ $ejecutar = $conexion->query($sql);
         
       <tr>
                 <td>producto </td>
-           
+               
                 <td>Nombre producto </td>
             
                 <td> Precio </td>

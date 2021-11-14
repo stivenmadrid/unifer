@@ -39,6 +39,7 @@ body{
     padding-left: 12;
 	height:300px;
 
+
   
 }
    
@@ -92,3 +93,7 @@ border-radius: 490px;
     h1{
 color: rgb(88, 63, 25);
     }
+
+    @media (max-width:320px){
+        
+      }
