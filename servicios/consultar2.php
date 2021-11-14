@@ -12,7 +12,7 @@
   $conexion = mysqli_connect("localhost", "root", "", "ferreteria") or
     die("Problemas con la conexión");
 
-  $registros = mysqli_query($conexion, "select *  from productos where id_productos='$_REQUEST[id_producto]'") or die("Problemas en el select:" . mysqli_error($conexion));
+  $registros = mysqli_query($conexion, "select *  from productos where codigo='$_REQUEST[codigo]'") or die("Problemas en el select:" . mysqli_error($conexion));
 
   if ($reg = mysqli_fetch_array($registros)) {
     echo "codigo:" . $reg['codigo'] . "<br>";
