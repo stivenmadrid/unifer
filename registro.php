@@ -1,26 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="css/styles_registro.css">
-    <link
-    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-        rel="stylesheet">
-    
-        <link href="bstra/css/sb-admin-2.min.css" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Registro-Usuarios</title>
 </head>
-<div class="h2">  </div> 
 <body>
-                                   
-                                        <div class="registro">  
+        <div>
+
         
-                                           <h1 align="center"><b> FORMULARIO DE REGISTRO</b> </h1> 
-                
-                                        <form action="servicios/registro.php" method="POST"  onsubmit="return validar();"> 
-                    
+
+          <form action="servicios/registro.php" method="POST" onsubmit="return validar();">
+                                                <h1> REGISTRARME </h1>
+
                                                 <Input type="text" placeholder="cedula" id="cedula" name="cedula" class="form-control form-control-user">
                                                 <br>
                                                 <Input type="text" placeholder="Nombre Completo" id="nombre" name="nomusu" class="form-control form-control-user">
@@ -37,10 +30,12 @@
                                                 <input type="password" placeholder="Confirmar contraseña" id="contraseña2" class="form-control form-control-user">
                                                 <br>
                                                 <INPUT TYPE="submit" NAME="REGISTRARME" VALUE="REGISTRARME" class="btn btn-success btn-user btn-block">
-                                        </form>
-                                        <P>Ya tienes una cuenta? entonces <a href="login.php"><spam>Click Aqui</spam></P></a>
-                                        </div>
-                                        
-    
+
+
+         </form>
+                                               <P>Ya tienes una cuenta? entonces <a href="login.php"><spam>Click Aqui</spam></P></a>
+
+
+        </div>
 </body>
 </html>
