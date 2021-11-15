@@ -8,7 +8,7 @@
         <title>Registro-Usuarios</title>
         <link rel="stylesheet" type="text/css" href="css/styles_registro.css">
         <link href="bstra/css/sb-admin-2.min.css" rel="stylesheet">
-        <link rel="stylesheet" media="only screen and (max-width: 768px)" href="estilos.css">
+    <link rel="stylesheet" media="only screen and (max-width: 768px)" href="estilos.css">
        
 </head>
 <body>
