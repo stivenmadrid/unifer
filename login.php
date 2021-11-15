@@ -9,12 +9,9 @@
     <link rel="stylesheet" type="text/css" href="css/login2.css">
     <link href="bstra/css/sb-admin-2.min.css" rel="stylesheet">
     <link rel="stylesheet" media="only screen and (max-width: 768px)" href="estilos.css">
-
 </head> 
 <div class="h2">  </div>      
 <body >
-
-
    <div class="login">
    
 	<h1 align="center">Login</h1>
@@ -40,11 +37,9 @@
  </div>
 >>>>>>> main
        
-
     
        
    
     <script src="js/script.js"></script>
 </body>
-
 </html>

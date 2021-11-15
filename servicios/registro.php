@@ -10,7 +10,7 @@
      //encriptador de password
 
      $conexion = mysqli_connect("localhost","root","","ferreteria") or die("Error en la conexiÃ³n a la base de datos");
-    $sql = "INSERT INTO usuario (cedula,nomusu, apeusu, emausu, telusu, pasusu) VALUES ($cedula,'$nombre','$apellido', '$correo', '$telefono', '$password')";
+    $sql = "INSERT INTO usuario (cedula,nomusu, apeusu, emausu, telusu, pasusu) VALUES ('$cedula','$nombre','$apellido', '$correo', '$telefono', '$password')";
 
     //VALIDADOR DE DATOS REPETIDOS EN BD SQL
     

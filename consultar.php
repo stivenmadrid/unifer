@@ -16,6 +16,7 @@ $pedido="SELECT * FROM pedido";
     <link rel="stylesheet" type="text/css" href="css/consultar.css">
     <link href="bstra/css/sb-admin-2.min.css" rel="stylesheet">
     
+    
    
 </head>
 
@@ -23,9 +24,13 @@ $pedido="SELECT * FROM pedido";
     
     
                <div CLASS="TABLA">
+           
                     <table class="table table-dark"  class="table" class="table table-responsive table-striped"> 
-                         <H2 ALIGN=CENTER> PEDIDOS </H1>
+                        
+                        
+                         <H2 ALIGN=CENTER> PEDIDOS </H2>
                             <tr>
+                               
                                     <td>ID PEDIDO</td>
                                     <td>CANTIDAD</td>
                                     <td>DIRECCION</td>
@@ -36,7 +41,10 @@ $pedido="SELECT * FROM pedido";
                                     <td>ID PRODUCTO</td>
                                     <td>CATEGORIA</td>
                                     <td>ESTADO</td>
-                            <tr>
+                                    <TD>AGREGAR ESTADO </TD>
+                                    <td>ACTUALIZAR DATOS </TD>
+                               
+                        </div>     <tr>
 <?php  
 
 $resultado = mysqli_query($conexion,$pedido);
@@ -44,7 +52,7 @@ $resultado = mysqli_query($conexion,$pedido);
 
 while($row=mysqli_fetch_assoc($resultado)){?>
                             <tr>
-                                
+                                    
                                     <td ><?php echo $row["id_pedido"]; ?> </td>
                                     <td> <?php echo $row["cantidad"]; ?> </td>
                                     <td><?php echo $row["direccion"]; ?>  </td>
@@ -55,14 +63,27 @@ while($row=mysqli_fetch_assoc($resultado)){?>
                                     <td><?php echo $row["id_productos"]; ?>  </td>
                                     <td><?php echo $row["id_categoria"]; ?>  </td>
                                     <td><?php echo $row["estado"]; ?>  </td>
-                                
-                                   
-
+                                    
+                                    <td> <form action="pedido.php" method="POST">
+                                    <input type="text" name="estadopedido"> <br>
+                                    <input type="hidden" name="id_pedidos" value=" <?php echo $row['id_pedido']?>"> 
+                                    <input type="submit" value="Guardar"  class="btn btn-primary btn-block btn-sm">
+                                    </form>
+                                  
+                                    </td>
+                                    <td>  <form action="Eliminar_pedido.php" method="POST" > 
+                                        <input type="hidden" name="id_pedidos" value="<?php echo $row['id_pedido']?>">
+                                        <input type="submit" value="Eliminar"  class="btn btn-primary btn-block btn-large">  
+                                    </form>
+                                    <td>
+                                    
+                                 
                       
                                     </tr> 
                            <?php } ?>       
                     </table>
 
+                   
                 </div>          
                
      

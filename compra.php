@@ -5,7 +5,7 @@ $codigo=$_SESSION['id_productos'];
 if(isset ($_POST["GENERARPEDIDO"]))
 
 {
-    echo '<h2>gracias por su compra!!!</h2>';
+    echo"<script>alert('COMPRA EXITOSA');window.location.href='pagina_principal.php';</script>";
     echo 'entro por comprar';
     echo "</br>";
     $id_pedido=rand (1,100000);
@@ -29,7 +29,8 @@ if(isset ($_POST["GENERARPEDIDO"]))
 
 $mediopago=$_POST['mediopago'];
 
-$usuario=$_SESSION['cedula'];
+$cedula=$_POST['cedula'];
+
 $id_productos=$_SESSION['id_productos'];
 
 
@@ -37,7 +38,7 @@ $id_productos=$_SESSION['id_productos'];
 
 $sql = "INSERT INTO pedido (cantidad,direccion,departamento,ciudad,mediopago,cedula,id_productos,id_categoria)  VALUES (
   
-    '$cantidad','$direccion','$departamento','$ciudad','$mediopago','$usuario','$id_productos','1');";
+    '$cantidad','$direccion','$departamento','$ciudad','$mediopago','$cedula','$id_productos','1');";
     $ejecutar = $conexion->query($sql);
 }
 
@@ -110,7 +111,7 @@ $sql = "select * from productos where id_productos=$codigo";
             <br>
             
 
-            METODO PAGO: 
+            METODO PAGO:
             <br>
             <br>
             
@@ -118,6 +119,7 @@ $sql = "select * from productos where id_productos=$codigo";
             CONTRA ENTREGA: <input type="radio" name="mediopago" value="entrega" class="form-control form-control-user">
             
             <br>
+            CEDULA: <input class="cedula" type="text" name="cedula" >
             <br>
             TOTAL COMPRA: <?php $total=$precio*$_SESSION['cantidad']; echo $total;   ?>
             <br>
