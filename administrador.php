@@ -32,7 +32,7 @@ function buscarProducto($id_productos)
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>unifer</title>
+    <title>MODULO ADMINISTRADOR</title>
     <link rel="stylesheet" type="text/css" href="css/styles_pagina_pricipal.css">
     <link rel="stylesheet" type="text/css" href="css/styles_tablaproductos.css">
 
@@ -52,7 +52,7 @@ a:link {
 }
 
 a:visited {
-  color: pink;
+  color: white;
   background-color: transparent;
   text-decoration: none;
 }
@@ -60,13 +60,13 @@ a:visited {
 a:hover {
   color: red;
   background-color: transparent;
-  text-decoration: underline;
+
 }
 
 a:active {
   color: yellow;
   background-color: transparent;
-  text-decoration: underline;
+ 
 }
 </style>
 
@@ -82,7 +82,7 @@ a:active {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>MODULO-ADMINISTRADOR</title>
 
     <!-- Custom fonts for this template-->
     <link href="bs/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -146,6 +146,8 @@ a:active {
 
 ?>
 </span>
+
+
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -159,20 +161,38 @@ a:active {
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseUtilities"
+                <!-- <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Registrarme en unifer</span>
-                </a>
+                    <!-- <span>REGISTRARME</span> -->
+                </a> -->
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
                         <a class="collapse-item" href="http://localhost/ferreteriaunifer/registro.php"> No tengo una cuenta</a>
-                        <a class="collapse-item" href="http://localhost/ferreteriaunifer/login.php"> iniciar sesion</a>
-                        <a class="collapse-item" href="consultar.php">Crear categoria</a>
+                  
+                     
                     </div>
                 </div>
+
+            </li>
+
+           
+            <form action="crearproducto.php" method="POST"> 
+             <input type="submit" value="CREAR NUEVO PRODUCTO"
+             class="btn btn-primary btn-block btn-large">   
+             </form>
+
+             <form action="consultar.php"   method="POST"> 
+             <input type="submit" value="CONSULTAR PEDIDOS" class="btn btn-primary btn-block btn-large">   
+             
+             </form><br>
+
+
+              
+             
+             
             </li>
         
 
@@ -191,7 +211,7 @@ a:active {
             
 
             
-
+           
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -242,6 +262,8 @@ a:active {
                   
 
                     <ul class="navbar-nav ml-auto">
+
+                    
 
                         
 

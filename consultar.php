@@ -28,7 +28,7 @@ $pedido="SELECT * FROM pedido";
                     <table class="table table-dark"  class="table" class="table table-responsive table-striped"> 
                         
                         
-                         <H2 ALIGN=CENTER> PEDIDOS </H2>
+                         <H2 ALIGN=CENTER> <a href="administrador.php" >PEDIDOS</a> </H2> 
                             <tr>
                                
                                     <td>ID PEDIDO</td>
