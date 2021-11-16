@@ -3,8 +3,9 @@
 include('../db.php');
 
 
-$wilmer='123456';
-$stiven='Invesa1234';
+// $wilmer='123456';$row['pasusu']=== $wilmer or $row['pasusu']=== $stiven
+// $stiven='Invesa1234';
+$cargo=1;
 $emausu = $_POST['emausu'];
 $sql = "SELECT * FROM usuario WHERE emausu='$emausu'";
 $result = mysqli_query($conexion, $sql);
@@ -14,15 +15,17 @@ if ($result) {
 	if ($count != 0) {
 		$pasusu = $_POST['pasusu'];
 		$email=$_POST['emausu'];
+		$rol=$_POST['id_rol'];
 		if ($row['pasusu'] != $pasusu) {
 			echo '
 			<script>
 				alert("Clave de acceso incorrecto");
 				window.location = "../login.php";
-			</script>
+			</script>			
+		
 		';
 		} else  {
-			if( $row['pasusu']=== $wilmer or $row['pasusu']=== $stiven ){
+			if( $row['pasusu']==$pasusu && $row['id_rol']==$cargo){
 				session_start();
 				$_SESSION['codusu'] = $row['codusu'];
 				$_SESSION['emausu'] = $row['emausu'];
