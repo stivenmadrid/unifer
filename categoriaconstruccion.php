@@ -29,7 +29,7 @@ $ejecutar = $conexion->query($sql);
             
             </tr>
 
-            <h1 align="center"><b> BIENVENIDOS A SU TIENDA UNIFER</b> </h1>
+            <h1  align="center"><b> BIENVENIDOS A SU TIENDA UNIFER</b> </h1>
    
         <?php
             while ($fila = mysqli_fetch_object($ejecutar))
