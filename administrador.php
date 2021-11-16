@@ -170,6 +170,7 @@ a:active {
                         <h6 class="collapse-header">Custom Utilities:</h6>
                         <a class="collapse-item" href="http://localhost/ferreteriaunifer/registro.php"> No tengo una cuenta</a>
                         <a class="collapse-item" href="http://localhost/ferreteriaunifer/login.php"> iniciar sesion</a>
+                        <a class="collapse-item" href="consultar.php">Crear categoria</a>
                     </div>
                 </div>
             </li>
