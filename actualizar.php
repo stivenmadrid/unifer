@@ -70,7 +70,7 @@ $ejecutar = $conexion->query($sql);
              <input type="submit" value="consultar pedidos" class="btn btn-primary btn-block btn-large">   
              </form><br>
              <form action="crearproducto.php" method="POST"> 
-             <input type="submit" value="insertar"
+             <input type="submit" value="crear producto"
              class="btn btn-primary btn-block btn-large">   
              </form><br>
              </td>';
