@@ -24,18 +24,10 @@
         <br>
         <button type="submit" id="Ingresar" class="btn btn-primary btn-block btn-large">Ingresar</button>
     </form>
-<<<<<<< HEAD
-    <P>si no estas registrado <a href="registro.php"><spam>Click Aqui</spam></P></a>
-</div>
-    
-    
-    
-
-=======
     <br>
     <P align="center">no tengo una cuenta <a   href="registro.php"><spam>Click Aqui</spam></P></a>
  </div>
->>>>>>> main
+
        
     
        

@@ -25,7 +25,7 @@ if ($result) {
 		
 		';
 		} else  {
-			if( $row['pasusu']==$pasusu && $row['id_rol']==$cargo){
+			if( $row['pasusu']==$pasusu && $row['id_rol']==1){
 				session_start();
 				$_SESSION['codusu'] = $row['codusu'];
 				$_SESSION['emausu'] = $row['emausu'];

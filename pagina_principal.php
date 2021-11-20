@@ -1,5 +1,11 @@
 <?php
  session_start();
+if(isset($SESSION['usuario'])){
+// si el usuario ha empezado sesion se redirige al index
+header('location: index.php');
+die();
+
+}
 include ("db.php");
 $sql = "select * from categoria";
 $ejecutar = $conexion->query($sql);

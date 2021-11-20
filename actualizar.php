@@ -66,13 +66,18 @@ $ejecutar = $conexion->query($sql);
              <input type="hidden" name="id_producto" value="'.$fila->id_productos.'">
              <input type="submit" value="Eliminar"   onclick="pedido()" class="btn btn-primary btn-block btn-large">   
              </form><br> 
-             <form action="consultar.php"   method="POST"> 
-             <input type="submit" value="consultar pedidos" class="btn btn-primary btn-block btn-large">   
-             </form><br>
-             <form action="crearproducto.php" method="POST"> 
-             <input type="submit" value="crear producto"
-             class="btn btn-primary btn-block btn-large">   
-             </form><br>
+// <<<<<<< HEAD
+//              <form action="consultar.php"   method="POST"> 
+//              <input type="submit" value="consultar pedidos" class="btn btn-primary btn-block btn-large">   
+//              </form><br>
+//              <form action="crearproducto.php" method="POST"> 
+//              <input type="submit" value="crear producto"
+//              class="btn btn-primary btn-block btn-large">   
+//              </form><br>
+// =======
+            
+             
+// >>>>>>> main
              </td>';
                 echo '</tr>';
                
