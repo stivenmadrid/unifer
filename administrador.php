@@ -183,7 +183,7 @@ a:active {
             <form action="crearproducto.php" method="POST">  <input type="submit" value="CREAR NUEVO PRODUCTO" class="btn btn-primary btn-block btn-large"> </form>
 
              <form action="consultar.php"   method="POST">  <input type="submit" value="CONSULTAR PEDIDOS" class="btn btn-primary btn-block btn-large">    </form>
-             <form action="crearproducto.php"   method="POST">  <input type="submit" value="CREAR CATEGORIA" class="btn btn-primary btn-block btn-large">    </form><br> 
+             <form action="crearcategoria.php"   method="POST">  <input type="submit" value="CREAR CATEGORIA" class="btn btn-primary btn-block btn-large">    </form><br> 
              <form action="privilegiousuarios.php" method="POST">  <input type="submit" value="PRIVILEGIO USUARIOS" class="btn btn-primary btn-block btn-large"> </form> 
             </li>
         

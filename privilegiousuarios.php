@@ -64,7 +64,7 @@ while($row=mysqli_fetch_assoc($resultado)){?>
                                     <td><?php echo $row["empresa"]; ?>  </td>
                                    
                                     
-                                    <td> <form action="privilegiousuario.php" method="POST">
+                                    <td> <form action="servicios/privilegiousuario.php" method="POST">
                                     <input type="text" name="privilegio_rol"> <br>
                                     <input type="hidden" name="cedu" value=" <?php echo $row['cedula']?>"> 
                                     <input type="submit" value="Guardar"  class="btn btn-primary btn-block btn-sm">

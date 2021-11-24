@@ -13,7 +13,7 @@ if (isset($crear))
     
     if (mysqli_query($conexion, $sql))
     {
-        echo"<script>alert('el producto tiene un pedido');window.location.href='administrador.php';</script>";
+        echo"<script>alert('categoria creada');window.location.href='../administrador.php';</script>";
 
     }
     else {  print "Error";
