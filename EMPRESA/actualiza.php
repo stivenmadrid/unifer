@@ -35,29 +35,6 @@ if ($reg = mysqli_fetch_array($registros)) {
 <body>
 
 
- 
-<!-- 
-        <div class="contenedor__consultar">
-             
-        <form >
-               
-                       <H2>CONSULTAR PRODUCTO</H2>
-                   
-                         Identificacion producto: 
-                        <input type="text" name="id_producto" class="form-control form-control-user" id="id_producto" placeholder=""  class="form-control form-control-user"> 
-                         <br>
-                        <input TYPE="submit"  VALUE="ACTUALIZAR DATOS" class="btn btn-warning btn-user btn-block" class="form-control form-control-user">
-                      
-              
-                   
-                 <br>
-                  <br>
-                  </form>
-        </div> -->
-                  
-            <!-- <div class="contenedor__actualizarproducto"> -->
-
-
 
            
             <?php include("paginapro.php")?>   

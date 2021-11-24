@@ -27,6 +27,7 @@
    </form>
 <br>
 <P align="center">no tengo una cuenta <a   href="registro.php"><spam>Click Aqui</spam></P></a>
+<P align="center">Ingresar como empresa <a   href="Empresa/login.php"><spam>Click Aqui</spam></P></a>
 </div>
 
 

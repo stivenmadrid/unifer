@@ -64,7 +64,7 @@ while($row=mysqli_fetch_assoc($resultado)){?>
                                     <td><?php echo $row["id_categoria"]; ?>  </td>
                                     <td><?php echo $row["estado"]; ?>  </td>
                                     
-                                    <td> <form action="pedido.php" method="POST">
+                                    <td> <form action="servicios/pedido.php" method="POST">
                                     <input type="text" name="estadopedido"> <br>
                                     <input type="hidden" name="id_pedidos" value=" <?php echo $row['id_pedido']?>"> 
                                     <input type="submit" value="Guardar"  class="btn btn-primary btn-block btn-sm">

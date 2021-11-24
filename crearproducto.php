@@ -20,7 +20,7 @@
  
     <div class="contenedor__producto">
 
-          <form ACTION="crearproducto.php" METHOD="POST">
+          <form ACTION="servicios/crear_producto.php" METHOD="POST">
           <h1><i> NUEVO PRODUCTO</i></h1>
                           
                                 <BR>
