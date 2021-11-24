@@ -38,6 +38,7 @@ $ejecutar = $conexion->query($sql);
                 {
                 
                     echo '<tr >';
+                    
                     echo '<td>'.$fila->id_productos.'</td>';
                 
                     

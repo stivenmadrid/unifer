@@ -34,6 +34,7 @@ if ($reg = mysqli_fetch_array($registros)) {
 
 <body>
 
+<<<<<<< HEAD
  
 <!-- 
         <div class="contenedor__consultar">
@@ -56,6 +57,8 @@ if ($reg = mysqli_fetch_array($registros)) {
                   
             <!-- <div class="contenedor__actualizarproducto"> -->
 
+=======
+>>>>>>> main
 
 
            
