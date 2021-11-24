@@ -137,7 +137,7 @@ a:active {
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class=""></i>
-                    <span class="categoria">Categorias <?php  while ($fila = mysqli_fetch_object($ejecutar))
+                    <span class="categoria">CATEGORIAS <?php  while ($fila = mysqli_fetch_object($ejecutar))
 
 { 
 
@@ -165,7 +165,7 @@ a:active {
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
                     <!-- <span>REGISTRARME</span> -->
-                </a> -->
+                </a> 
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -178,21 +178,13 @@ a:active {
 
             </li>
 
-           
-            <form action="crearproducto.php" method="POST"> 
-             <input type="submit" value="CREAR NUEVO PRODUCTO"
-             class="btn btn-primary btn-block btn-large">   
-             </form>
+           <br>
+           <br>
+            <form action="crearproducto.php" method="POST">  <input type="submit" value="CREAR NUEVO PRODUCTO" class="btn btn-primary btn-block btn-large"> </form>
 
-             <form action="consultar.php"   method="POST"> 
-             <input type="submit" value="CONSULTAR PEDIDOS" class="btn btn-primary btn-block btn-large">   
-             
-             </form><br>
-
-
-              
-             
-             
+             <form action="consultar.php"   method="POST">  <input type="submit" value="CONSULTAR PEDIDOS" class="btn btn-primary btn-block btn-large">    </form>
+             <form action="crearproducto.php"   method="POST">  <input type="submit" value="CREAR CATEGORIA" class="btn btn-primary btn-block btn-large">    </form><br> 
+             <form action="privilegiousuarios.php" method="POST">  <input type="submit" value="PRIVILEGIO USUARIOS" class="btn btn-primary btn-block btn-large"> </form> 
             </li>
         
 

@@ -1,0 +1,19 @@
+  body{
+
+    background-image: url(../assets/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+} 
+
+
+.TABLA{
+  padding: 30px;
+  padding-left: 12;
+  margin-left: 2.5px ;
+  border-radius: 50px;
+}
+
+
+H2{
+  background: rgb(49, 49, 49);
+}
