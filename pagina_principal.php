@@ -46,28 +46,19 @@ function buscarProducto($id_productos)
     <link href="bstra/css/sb-admin-2.min.css" rel="stylesheet">
     <style>
 a:link {
-  color: green;
+  color: white;
   background-color: transparent;
   text-decoration: none;
 }
 
 a:visited {
-  color: pink;
+  color: white;
   background-color: transparent;
   text-decoration: none;
 }
 
-a:hover {
-  color: red;
-  background-color: transparent;
-  text-decoration: underline;
-}
 
-a:active {
-  color: yellow;
-  background-color: transparent;
-  text-decoration: underline;
-}
+
 </style>
 
 </head>
@@ -104,7 +95,7 @@ a:active {
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" >
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -118,7 +109,7 @@ a:active {
             <li class="nav-item active">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Inicio</span></a>
+                    <span backround-color:>Inicio</span></a>
             </li>
 
             <!-- Divider -->
@@ -137,7 +128,7 @@ a:active {
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class=""></i>
-                    <span class="categoria">Categorias <?php  while ($fila = mysqli_fetch_object($ejecutar))
+                    <span class="categoria">CATEGORIAS <?php  while ($fila = mysqli_fetch_object($ejecutar))
 
 { 
 
@@ -156,40 +147,15 @@ a:active {
                     </div>
                 </div>
             </li>
-
+            <br> <br> <br>
+            
+            <form action="registro.php"   method="POST">  <input type="submit" value="REGISTRARME EN UNIFER" class="btn btn-primary btn-block btn-large">    </form>
+            <form action="login.php"   method="POST">  <input type="submit" value="INICIAR SESION" class="btn btn-primary btn-block btn-large">    </form>
             <!-- Nav Item - Utilities Collapse Menu -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Registrarme en unifer</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="http://localhost/ferreteriaunifer/registro.php"> No tengo una cuenta</a>
-                        <a class="collapse-item" href="http://localhost/ferreteriaunifer/login.php"> iniciar sesion</a>
-                    </div>
-                </div>
-            </li>
+           
         
 
-            <!-- Divider -->
-            <hr class="sidebar-divider">
 
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Addons
-            </div>
-
-            <!-- Nav Item - Pages Collapse Menu -->
-           
-
-            <!-- Nav Item - Charts -->
-            
-
-            
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
