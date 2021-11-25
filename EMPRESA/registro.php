@@ -20,7 +20,7 @@
 
           <form align="center" action="servicios/registro.php" method="POST" onsubmit="return validar();">
          
-                                                <h1 align="center"> REGISTRARME </h1>
+                                                <h1 align="center"> EMPRESA </h1>
 
                                                 <Input type="text" placeholder="NIT" id="cedula" name="cedula" class="form-control form-control-user">
                                                 <br>
