@@ -12,6 +12,7 @@
        
 </head>
 <body>
+<div class="posicion">
 
         <div class="registro">
 
@@ -39,7 +40,7 @@
                                                 <Input type="text" placeholder="Confirmar Nit" id="Nit" name="Nit" class="form-control form-control-user">
                                                 <br>
                                                 <Input type="text" placeholder="Nombre Empresa" id="empresa" name="nombre_empresa" class="form-control form-control-user">
-                                               
+                                                <br>
                                                 <INPUT TYPE="submit" NAME="REGISTRARME" VALUE="REGISTRARME" class="btn btn-primary btn-block btn-large">
                                                  <br>
                                               
@@ -48,9 +49,12 @@
                                               
 
          </form>
-                                               
+         </div>                                         
+         </div>                                         
       
-
-        </div>
+<script src="script/js">
+        
+</script>
+       
 </body>
 </html>

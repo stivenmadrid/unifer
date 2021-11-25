@@ -12,6 +12,8 @@
        
 </head>
 <body>
+<div class="posicion">
+        
 
         <div class="registro">
 
@@ -49,5 +51,9 @@
       
 
         </div>
+        </div>
+        <script src="js/script.js">
+                
+        </script>
 </body>
 </html>
