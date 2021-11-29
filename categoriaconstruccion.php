@@ -10,6 +10,7 @@ $ejecutar = $conexion->query($sql);
 
 <body background=pink>
 <link rel="stylesheet" type="text/css" href="css/styles_tablaproductos.css">
+
     <main class="separarproductos">
           <div class="contenedor__productostabla">    
           <table>
@@ -29,7 +30,7 @@ $ejecutar = $conexion->query($sql);
             
             </tr>
 
-            <h1  align="center"><b> BIENVENIDOS A SU TIENDA UNIFER</b> </h1>
+            <h1  align="center"><b> <i>BIENVENIDOS A SU TIENDA UNIFER</i></b> </h1>
    
         <?php
             while ($fila = mysqli_fetch_object($ejecutar))

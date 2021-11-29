@@ -1,5 +1,4 @@
 
-
 body{
 
 	background-image: url(../assets/fondo.jpg);
@@ -9,11 +8,11 @@ body{
 .registro{
 	
     width: 100%; 
-	margin-bottom: 10px; 
+	margin-bottom: 7px; 
 	background: rgba(0, 0, 0, 0.185);
 	border: none;
 	outline: none;
-	padding: 30px;
+	padding: 20px;
 	font-size: 13px;
 	color: #fff;
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
@@ -24,14 +23,15 @@ body{
 	transition: box-shadow .5s ease;
     border-radius: 20px;
  
-	left: 45%;
-	width: 460px;
-	height:280px;
-    margin-left: 600px ;
+	left:45%;
+	width: 400px;
+
+    
     position: absolute;
-	top: 30%;
+	top: 25%;
 	margin: -150px 0 0 -150px;
      
-	height:600px;
+	height:680px;
 
 }
+.posicion{display:flex;justify-content: center;}
