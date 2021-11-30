@@ -18,6 +18,7 @@ $ejecutar = $conexion->query($sql);
             
         
       <tr>
+               <td>NombreEmpresa </td>
                 <td>producto </td>
                
                 <td>Nombre producto </td>
@@ -37,9 +38,20 @@ $ejecutar = $conexion->query($sql);
             
 
                 {
-                
+                    $sql2=" select u.empresa, e.cedula
+                    FROM empresaproducto as e inner join usuario as u
+                    on  e.cedula=u.cedula where e.id_productos='$fila->id_productos'";
+                      $ejecutar2 = $conexion->query($sql2);
+                      $fila2 = mysqli_fetch_object($ejecutar2);
+                      if($fila2==""){
+      
+                          $nombreempresa="sin nombre de empresa";
+                      }else{
+                          $nombreempresa=$fila2->empresa;
+                          
+                      }
                     echo '<tr >';
-                    
+                    echo '<td>'.$nombreempresa.'</td>';
                     echo '<td>'.$fila->id_productos.'</td>';
                 
                     

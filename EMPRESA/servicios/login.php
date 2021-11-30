@@ -31,7 +31,7 @@ if ($result) {
 				$_SESSION['emausu'] = $row['emausu'];
 				$_SESSION['nomusu'] = $row['nomusu'];
 				$_SESSION['usuario'] = $row['Usuario'];
-				header('Location: ../administrador.php');
+				header('Location: ../pagina_principal.php');
 
 			}else{
 
