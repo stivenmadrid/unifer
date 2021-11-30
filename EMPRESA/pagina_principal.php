@@ -32,7 +32,7 @@ function buscarProducto($id_productos)
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>unifer</title>
+    <title>MODULO ADMINISTRADOR</title>
     <link rel="stylesheet" type="text/css" href="css/styles_pagina_pricipal.css">
     <link rel="stylesheet" type="text/css" href="css/styles_tablaproductos.css">
 
@@ -52,7 +52,7 @@ a:link {
 }
 
 a:visited {
-  color: pink;
+  color: white;
   background-color: transparent;
   text-decoration: none;
 }
@@ -60,13 +60,13 @@ a:visited {
 a:hover {
   color: red;
   background-color: transparent;
-  text-decoration: underline;
+
 }
 
 a:active {
   color: yellow;
   background-color: transparent;
-  text-decoration: underline;
+ 
 }
 </style>
 
@@ -82,7 +82,7 @@ a:active {
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Dashboard</title>
+    <title>MODULO-ADMINISTRADOR</title>
 
     <!-- Custom fonts for this template-->
     <link href="bs/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -137,7 +137,7 @@ a:active {
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class=""></i>
-                    <span class="categoria">Categorias <?php  while ($fila = mysqli_fetch_object($ejecutar))
+                    <span class="categoria">CATEGORIAS <?php  while ($fila = mysqli_fetch_object($ejecutar))
 
 { 
 
@@ -146,6 +146,8 @@ a:active {
 
 ?>
 </span>
+
+
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
@@ -159,19 +161,29 @@ a:active {
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseUtilities"
+                <!-- <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Registrarme en unifer</span>
-                </a>
+                    <!-- <span>REGISTRARME</span> -->
+                </a> 
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
                         <a class="collapse-item" href="http://localhost/ferreteriaunifer/registro.php"> No tengo una cuenta</a>
-                        <a class="collapse-item" href="http://localhost/ferreteriaunifer/login.php"> iniciar sesion</a>
+                  
+                     
                     </div>
                 </div>
+
+            </li>
+
+           <br>
+           <br>
+            <form action="crearproducto.php" method="POST">  <input type="submit" value="CREAR NUEVO PRODUCTO" class="btn btn-primary btn-block btn-large"> </form>
+
+             <form action="consultar.php"   method="POST">  <input type="submit" value="CONSULTAR PEDIDOS" class="btn btn-primary btn-block btn-large">    </form>
+             
             </li>
         
 
@@ -190,7 +202,7 @@ a:active {
             
 
             
-
+           
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
@@ -241,6 +253,8 @@ a:active {
                   
 
                     <ul class="navbar-nav ml-auto">
+
+                    
 
                         
 
@@ -377,7 +391,7 @@ a:active {
         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <span class="mr-2 d-none d-lg-inline text-gray-600 small"> <?php echo $_SESSION[ 'emausu'];  ?> </span>
         <img class="img-profile rounded-circle"
-            src="../assets/fondo.jpg">
+            src="bs/img/undraw_profile.svg">
     </a>
     <!-- Dropdown - User Information -->
     <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -395,7 +409,7 @@ a:active {
             Activity Log
         </a>
         <div class="dropdown-divider"></div>
-        <a href="servicios/salir.php/pagina_principal.php"  data-target="#logoutModal" >
+        <a href="servicios/salir.php/login.php"  data-target="#logoutModal" >
             <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
             Salir
         </a>
@@ -407,7 +421,7 @@ a:active {
 </nav>
 <!-- End of Topbar -->
 <?php
-include('categoriaconstruccion.php');
+include('actualizar.php');
 ?>
 </div>
 <!-- End of Main Content -->

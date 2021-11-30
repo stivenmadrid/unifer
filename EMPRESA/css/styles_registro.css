@@ -1,5 +1,4 @@
 
-
 body{
 
 	background-image: url(../assets/fondo.jpg);
@@ -34,4 +33,9 @@ body{
      
 	height:680px;
 
+<<<<<<< HEAD
 }.posicion{{display:flex;justify-content: center;}
+=======
+}
+.posicion{display:flex;justify-content: center;}
+>>>>>>> 0626a643b8bfc19bccb32e86cc392966c4db6401

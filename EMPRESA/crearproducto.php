@@ -20,7 +20,7 @@
  
     <div class="contenedor__producto">
 
-          <form ACTION="crearproducto.php" METHOD="POST">
+          <form ACTION="../servicios/crear_producto.php" METHOD="POST">
           <h1><i> NUEVO PRODUCTO</i></h1>
                           
                                 <BR>
@@ -30,6 +30,7 @@
                             REFERENCIA:                  <INPUT TYPE="text" NAME="referencia" class="form-control form-control-user"><br><br>
                             IMAGEN:                      <INPUT TYPE="text" NAME="imagen" class="form-control form-control-user"><br><br>
                             INGRESA LA CATEGORIA:        <INPUT TYPE="text" NAME="productos_id_categoria" class="form-control form-control-user"><br>
+                            EMPRESA:        <INPUT TYPE="text" NAME="empresa" class="form-control form-control-user"><br>
                         
                            <INPUT TYPE="submit" NAME="crear" VALUE="crear" class="btn btn-primary btn-block btn-large" >
 

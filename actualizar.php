@@ -3,6 +3,9 @@ $conexion = mysqli_connect("localhost","root","","ferreteria") or die("Error en 
 $sql = "select * from productos";
 $ejecutar = $conexion->query($sql);
 
+
+
+
 ?>
 
 
@@ -11,6 +14,7 @@ $ejecutar = $conexion->query($sql);
 <body background=pink>
 
 <link rel="stylesheet" type="text/css" href="css/styles_categoriaconstruccion.css">
+<link href="bstra/css/sb-admin-2.min.css" rel="stylesheet">
     <main class="separarproductos">
           <div class="contenedor__productostabla">    
           <table>
@@ -18,20 +22,13 @@ $ejecutar = $conexion->query($sql);
             
         
       <tr>
-
+               <td>Nombre Empresa </td>
                 <td>id </td>
                 <td> codigo </td>
-               
-              
                 <td>Nombre producto </td>
-                
                 <td> Precio </td>
-             
                 <td> Referencia </td>
-             
-        
                 <td> Imagen </td>
-                
                 <td> cantidad </td>
 
           
@@ -41,14 +38,30 @@ $ejecutar = $conexion->query($sql);
             </tr>
 
             <h1 align="center"><b> BIENVENIDOS A SU TIENDA UNIFER</b> </h1>
+
    
         <?php
             while ($fila = mysqli_fetch_object($ejecutar))
    
 
             {
+
+              $sql2=" select u.empresa, e.cedula
+              FROM empresaproducto as e inner join usuario as u
+              on  e.cedula=u.cedula where e.id_productos='$fila->id_productos'";
+                $ejecutar2 = $conexion->query($sql2);
+                $fila2 = mysqli_fetch_object($ejecutar2);
+                if($fila2==""){
+
+                    $nombreempresa="sin nombre de empresa";
+                }else{
+                    $nombreempresa=$fila2->empresa;
+                    
+                }
+
                 echo '<tr >'; 
-                echo '<td>'.$fila->id_productos.'</td>';
+
+                echo '<td>'.$nombreempresa.'</td>';
                 echo '<td>'.$fila->codigo.'</td>';
                 echo '<td>'.$fila->nombre_producto.'</td>';
                 echo '<td>'.$fila->precio.'</td>';

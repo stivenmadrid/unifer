@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
         <title>Registro-Usuarios</title>
         <link rel="stylesheet" type="text/css" href="../EMPRESA/css/styles_registro.css">
         <link href="bstra/css/sb-admin-2.min.css" rel="stylesheet">
@@ -13,15 +12,19 @@
 </head>
 <body>
 <div class="posicion">
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0626a643b8bfc19bccb32e86cc392966c4db6401
         <div class="registro">
-
         
-
           <form align="center" action="servicios/registro.php" method="POST" onsubmit="return validar();">
          
                                                 <h1 align="center"> EMPRESA </h1>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0626a643b8bfc19bccb32e86cc392966c4db6401
                                                 <Input type="text" placeholder="NIT" id="cedula" name="cedula" class="form-control form-control-user">
                                                 <br>
                                                 <Input type="text" placeholder="Nombre Usuario" id="nombre_usuario" name="nomusu" class="form-control form-control-user">
@@ -45,9 +48,7 @@
                                                  <br>
                                               
                                                  <P>Ya tienes una cuenta? entonces <a href="login.php"><spam>Click Aqui</spam></P></a>
-
                                               
-
          </form>
          </div>                                         
          </div>                                         
