@@ -18,7 +18,7 @@ if (isset($crear))
     
     if (mysqli_query($conexion, $sql))
     {
-        echo"<script>alert('se inserto correctamente');window.location.href='../administrador.php';</script>";
+        echo"<script>alert('se inserto correctamente');window.location.href='../pagina_principal.php';</script>";
 
     }
     else {  print "Error";

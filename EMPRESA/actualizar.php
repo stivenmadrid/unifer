@@ -1,11 +1,18 @@
 <?php
+
 $conexion = mysqli_connect("localhost","root","","ferreteria") or die("Error en la conexiÃ³n a la base de datos");
 $sql = "select * from productos";
 $ejecutar = $conexion->query($sql);
 
+// $sql3="select * from usuario";
+// $ejecutar3=$conexion->query($sql3);
+// $fila3 = mysqli_fetch_object($ejecutar3);
+// if($fila3==emausu){
 
 
 
+
+// }
 
 ?>
 
@@ -42,27 +49,28 @@ $ejecutar = $conexion->query($sql);
 
    
         <?php
-            while ($fila = mysqli_fetch_object($ejecutar))
-   
+        $usuario=$_SESSION['emausu'];
+        $sql2="select e.id_productos, u.empresa, u.emausu
+        FROM empresaproducto as e inner join usuario as u 
+        on e.cedula=u.cedula where u.emausu='$usuario'";
 
+
+        
+        $ejecutar = $conexion->query($sql2);
+            while ($fila3 = mysqli_fetch_object($ejecutar))
             {
 
-              $sql2=" select u.empresa, e.cedula
-              FROM empresaproducto as e inner join usuario as u
-              on  e.cedula=u.cedula where e.id_productos='$fila->id_productos'";
-                $ejecutar2 = $conexion->query($sql2);
-                $fila2 = mysqli_fetch_object($ejecutar2);
-                if($fila2==""){
-
-                    $nombreempresa="sin nombre de empresa";
-                }else{
-                    $nombreempresa=$fila2->empresa;
-                    
-                }
-
+                $sql3=" select * from productos where id_productos='$fila3->id_productos'";
+          $ejecutar3=$conexion->query($sql3);
+          $fila = mysqli_fetch_object($ejecutar3);
+          $empresa=$fila3->empresa;
+              
+    
+               
                 echo '<tr >'; 
-
-                echo '<td>'.$nombreempresa.'</td>';
+               
+                echo '<td>'.$empresa.'</td>';
+                echo '<td>'.$fila->id_productos.'</td>';
                 echo '<td>'.$fila->codigo.'</td>';
                 echo '<td>'.$fila->nombre_producto.'</td>';
                 echo '<td>'.$fila->precio.'</td>';

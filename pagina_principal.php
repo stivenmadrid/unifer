@@ -33,7 +33,7 @@ function buscarProducto($id_productos)
     <meta name="author" content="">
 
     <title>unifer</title>
-    <link rel="stylesheet" type="text/css" href="css/styles_pagina_pricipal.css">
+   
     <link rel="stylesheet" type="text/css" href="css/styles_tablaproductos.css">
 
     <!-- Custom fonts for this template-->
@@ -86,7 +86,7 @@ a:visited {
 
 </head>
 
-<body id="page-top">
+<body class="paginaprincipal" id="page-top">
 
     <!-- Page Wrapper -->
     <div id="wrapper">
