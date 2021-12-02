@@ -8,7 +8,7 @@
     <title>NUEVO-PRODUCTO</title>
     
     <link rel="stylesheet" type="text/css" href="../EMPRESA/css/producto.css">
-      
+    
 
     <link href="bstra/css/sb-admin-2.min.css" rel="stylesheet">
 </head>
@@ -33,25 +33,15 @@
                             REFERENCIA:                  <INPUT TYPE="text" NAME="referencia" class="form-control form-control-user"><br><br>
                             IMAGEN:                      <INPUT TYPE="text" NAME="imagen" class="form-control form-control-user"><br><br>
                             INGRESA LA CATEGORIA:        <INPUT TYPE="text" NAME="productos_id_categoria" class="form-control form-control-user"><br>
+                           NIT EMPRESA: <INPUT TYPE="text" NAME="nit" class="form-control form-control-user"><br>
                         
-                            <form>
                            <INPUT TYPE="submit" NAME="crear" VALUE="crear" class="btn btn-primary btn-block btn-large" >
 
+                           
         </form>
     <div>
 
-
-    <div class="empresaproducto">
-                <form action="servicios/empresaproducto" method="post">
-                 ID PRODUCTO:  <INPUT TYPE="text" NAME="nit" class="form-control form-control-user"><br>
-                 ID PRODUCTO:  <INPUT TYPE="text" NAME="id_producto" class="form-control form-control-user"><br>
-
-
-
-          <form>
-
-    </div>
-                          
+           
 
 
     
