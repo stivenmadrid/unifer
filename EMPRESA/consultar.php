@@ -1,7 +1,15 @@
-<?php
 
-include('db.php'); 
-$pedido="SELECT * FROM pedido";
+<?php
+session_start();
+$conexion = mysqli_connect("localhost","root","","ferreteria") or die("Error en la conexiÃ³n a la base de datos");
+$sql = "select * from pedido";
+$ejecutar = $conexion->query($sql);
+
+// $sql3="select * from usuario";
+// $ejecutar3=$conexion->query($sql3);
+// $fila3 = mysqli_fetch_object($ejecutar3);
+// if($fila3==emausu){
+
 
 ?>
 <!DOCTYPE html>
@@ -42,49 +50,50 @@ $pedido="SELECT * FROM pedido";
                                     <td>ESTADO</td>
                                     <TD>AGREGAR ESTADO </TD>
                                     <td>ACTUALIZAR DATOS </TD>
-                               
-                        </div>     <tr>
-<?php  
-
-$resultado = mysqli_query($conexion,$pedido);
-
-
-while($row=mysqli_fetch_assoc($resultado)){?>
-                            <tr>
-                                    
-                                    <td ><?php echo $row["id_pedido"]; ?> </td>
-                                    <td> <?php echo $row["cantidad"]; ?> </td>
-                                    <td><?php echo $row["direccion"]; ?>  </td>
-                                    <td><?php echo $row["departamento"]; ?> </td>
-                                    <td> <?php echo $row["ciudad"];?> </td>
-                                    <td><?php echo $row["mediopago"]; ?>  </td>
-                                    <td><?php echo $row["cedula"]; ?>  </td>
-                                    <td><?php echo $row["id_productos"]; ?>  </td>
-                                    <td><?php echo $row["id_categoria"]; ?>  </td>
-                                    <td><?php echo $row["estado"]; ?>  </td>
-                                    
-                                    <td> <form action="servicios/pedido.php" method="POST">
-                                    <input type="text" name="estadopedido"> <br>
-                                    <input type="hidden" name="id_pedidos" value=" <?php echo $row['id_pedido']?>"> 
-                                    <input type="submit" value="Guardar"  class="btn btn-primary btn-block btn-sm">
-                                    </form>
                                   
-                                    </td>
-                                    <td>  <form action="Eliminar_pedido.php" method="POST" > 
-                                        <input type="hidden" name="id_pedidos" value="<?php echo $row['id_pedido']?>">
-                                        <input type="submit" value="Eliminar"  class="btn btn-primary btn-block btn-large">  
-                                    </form>
-                                    <td>
-                                    
-                                 
-                      
-                                    </tr> 
-                           <?php } ?>       
-                    </table>
+                               
+                            <tr>
 
-                   
-                </div>          
+                            <?php
+        $usuario=$_SESSION['emausu'];
+        
+        $sql2="select p.id_pedido,p.cantidad,p.direccion,p.departamento,p.ciudad,p.mediopago,p.cedula,p.id_productos,p.id_categoria,p.estado,p.id_empresa_producto,u.emausu
+         FROM pedido as p inner join empresaproducto as em 
+         on p.id_empresa_producto=em.id_empresa_producto 
+         inner join usuario as u 
+         on u.cedula=u.cedula where u.emausu='$usuario'";
+
+  
+        
+        $ejecutar = $conexion->query($sql2);
+            while ($fila3 = mysqli_fetch_object($ejecutar))
+            {
+
+         $sql2=" select * from pedido where id_pedido='$fila3->id_pedido'";
+          $ejecutar3=$conexion->query($sql2);
+          $fila = mysqli_fetch_object($ejecutar3);
+        
+          
+              
+    
                
+                echo '<tr >'; 
+               
+                
+                echo '<td>'.$fila->id_pedido.'</td>';
+                echo '<td>'.$fila->cantidad.'</td>';
+                echo '<td>'.$fila->direccion.'</td>';
+                echo '<td>'.$fila->ciudad.'</td>';
+                echo '<td>'.$fila->mediopago.'</td>';
+                echo '<td>'.$fila->cedula.'</td>';
+                echo '<td>'.$fila->id_productos.'</td>';
+                echo '<td>'.$fila->id_categoria.'</td>';
+                echo '<td>'.$fila->estado.'</td>';
+            
+             
+                
+            }
+        ?>
      
 
 

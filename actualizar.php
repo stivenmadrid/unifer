@@ -58,10 +58,11 @@ $ejecutar = $conexion->query($sql);
                     $nombreempresa=$fila2->empresa;
                     
                 }
-
+               
                 echo '<tr >'; 
-
+               
                 echo '<td>'.$nombreempresa.'</td>';
+                echo '<td>'.$fila->id_productos.'</td>';
                 echo '<td>'.$fila->codigo.'</td>';
                 echo '<td>'.$fila->nombre_producto.'</td>';
                 echo '<td>'.$fila->precio.'</td>';
