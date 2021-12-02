@@ -19,21 +19,20 @@ body {
     box-shadow: inset 0 -5px 45px rgba(100, 100, 100, 0), 0 1px 1px rgba(255, 255, 255, 0);
     transition: box-shadow .5s ease;
     border-radius: 20px;
-<<<<<<< HEAD
-
-=======
->>>>>>> main
- 
-	left: 45%;
-	width: 400px;
-	
-   
+    left: 45%;
+    width: 400px;
     position: absolute;
-	top: 25%;
-	margin: -150px  0 -150px;
-     
-	height:600px;
+    top: 25%;
+    margin: -150px 0 -150px;
+    height: 600px;
+}
 
-}.registro{display:flex;justify-content: center;
+.registro {
+    display: flex;
+    justify-content: center;
+}
 
-}.posicion{display:flex;justify-content: center}
+.posicion {
+    display: flex;
+    justify-content: center
+}
